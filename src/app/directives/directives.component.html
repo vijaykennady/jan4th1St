@@ -1,0 +1,88 @@
+<p>directives works!</p>
+<h1>ngFor Directives</h1>
+
+<ul>
+
+    <li *ngFor="let m of movie; let i=index">{{i+1}} {{m}}</li>
+
+</ul>
+
+<h1>Json Data</h1>
+
+<ul>
+
+    <li *ngFor="let m1 of movies">{{m1.Name}} - {{m1.Director}} - {{m1.Hero}}</li>
+
+</ul>
+
+<h1>Table</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Director</th>
+            <th>Hero</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let m2 of movies;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{m2.Name}}</td>
+            <td>{{m2.Director}}</td>
+            <td>{{m2.Hero}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>ngSwitch</h1>
+
+<label for="">Type number</label>
+<input type="text" [(ngModel)]="num">
+<div [ngSwitch]="num">
+    <div *ngSwitchCase="1">
+        One
+    </div>
+    <div *ngSwitchCase="2">
+        Two
+    </div>
+    <div *ngSwitchCase="3">
+        Three
+    </div>
+</div>
+
+<h1>ngIf directives</h1>
+
+<label for="">Kindly see</label>
+<input type="checkbox" [(ngModel)]="showMe">
+<p *ngIf="showMe;">Show me Checked</p>
+<p *ngIf="!showMe">Show me UnChecked</p>
+
+<!-- <ng-template #check>
+   <p> Show me UnChecked</p>
+</ng-template> -->
+
+<h1>ngClass Directives</h1>
+<!-- below is 1st method -->
+<div [ngClass]="['primary']">
+    Sample
+</div>
+
+<div [ngClass]="['primary','big']">
+    Sample abc
+</div>
+
+<!-- below is second method -->
+<div [ngClass]="{'primary':false}">
+    Sample vijay
+</div>
+<br>
+Color<input type="checkbox" [(ngModel)]="enableRed">
+Size<input type="checkbox" [(ngModel)]="enableBig">
+Italic<input type="checkbox" [(ngModel)]="enableSty">
+<div [ngClass]="{'primary':enableRed,'big':enableBig,'sty':enableSty}">
+    Sample vijay
+</div>
+
+<app-ng-style></app-ng-style>

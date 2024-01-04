@@ -1,0 +1,35 @@
+<h1>Pipes example</h1>
+
+<h3>Date Pipes</h3>
+
+<h1>unformetted date: {{day}}</h1>
+
+<h1>formetted date: {{day|date}}</h1>
+
+<h1>Medium: {{day|date:'medium'}}</h1>
+
+<h1>full Date: {{day|date:'fullDate'}}</h1>
+
+<h1>Short Date: {{day|date:'short'}}</h1>
+
+<h1>Long Date: {{day|date:'longDate'}}</h1>
+
+<!-- {{day}} is taken from pipe ts calss for more details kindly refer it -->
+
+
+<h1>Upper and lower case pipe</h1>
+
+<h1>Upper case: {{message|uppercase}}</h1>
+<h1>Lower case: {{message|lowercase}}</h1>
+
+<h1>Slice pipes</h1>
+<h1>{{message|slice:0:5}}</h1>
+<h1>{{message|slice:-5}}</h1>
+<h1>{{message|slice:0:-6}}</h1>
+
+
+<h1>Currency Pipes </h1>
+<h1>Amount: {{amt|currency:'INR'}}</h1>
+<h1>Amount: {{amt|currency:'CAD'}}</h1>
+
+<app-form></app-form>

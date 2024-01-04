@@ -1,0 +1,12 @@
+<h1>ngStyle Example</h1>
+
+<h1 [ngStyle]="{'color':'green'}">Vijay</h1>
+
+<h1 [ngStyle]="{'color':status=='error'?'red':'yellow'}">Kumar</h1>
+
+<h1 [ngStyle]="{'color':'purple','font-size':'50px','font-weight':'bold'}">Harish</h1>
+
+Color <input type="text" [(ngModel)]="col">
+<h1 [ngStyle]="{'color':col}">Vinoth</h1>
+
+<app-pipes></app-pipes>

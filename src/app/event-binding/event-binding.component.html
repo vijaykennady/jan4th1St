@@ -1,0 +1,14 @@
+<p>event-binding works!</p>
+<h1>Count of clicking {{count}}</h1>
+<h1>Count of click one {{click1}}</h1>
+<button (click)="clickMe();click1=count">Click Me</button>
+<br><br>
+<input type="text" (input)="handle($event)">
+<p>With {{value}}</p>
+
+
+<!-- <input type="text" (input)="handle($event); value1=$any($event.target).value">
+
+<p>without {{value1}}</p> -->
+
+<app-directives></app-directives>
